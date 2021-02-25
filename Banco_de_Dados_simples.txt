@@ -14,7 +14,7 @@ CREATE TABLE alunos (
 );
 INSERT INTO alunos(nome,email,endereço,cpf,turma) VALUES ("João Pedro","exemplo01@gmail.com","Rua: Demacia - 154","14487454125","CC01");
 INSERT INTO alunos(nome,email,endereço,cpf,turma) VALUES ("Gustavo","exemplo02@gmail.com","Rua: Miasma - 204","14487454125","CC02");
-INSERT INTO alunos(nome,email,endereço,cpf,turma) VALUES ("Leonardo","exemplo03@gmail.com","Rua: Meteoro - 120","14487454125","CC04");
+INSERT INTO alunos(nome,email,endereço,cpf,turma) VALUES ("Matheus","exemplo03@gmail.com","Rua: Meteoro - 120","14487454125","CC04");
 INSERT INTO alunos(nome,email,endereço,cpf,turma) VALUES ("Caio","exemplo04@gmail.com","Rua: Cataclismo - 874","14487454125","CC01");
 INSERT INTO alunos(nome,email,endereço,cpf,turma) VALUES ("Lucas","exemplo05@gmail.com","Rua: Dardo de Prata - 354","14487454125","CC01");
 
