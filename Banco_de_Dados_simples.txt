@@ -1,0 +1,53 @@
+DROP TABLE IF EXISTS alunos;
+DROP TABLE IF EXISTS faculdade;	
+DROP TABLE IF EXISTS professor;
+DROP TABLE IF EXISTS disciplinas;
+
+CREATE TABLE alunos (
+    alunos_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(45) NOT NULL,
+    email TEXT NOT NULL,
+    endereço TEXT NOT NULL,
+    cpf VARCHAR(13) NOT NULL,
+    turma VARCHAR(6),
+    PRIMARY KEY(alunos_id)
+);
+INSERT INTO alunos(nome,email,endereço,cpf,turma) VALUES ("João Pedro","exemplo01@gmail.com","Rua: Demacia - 154","14487454125","CC01");
+INSERT INTO alunos(nome,email,endereço,cpf,turma) VALUES ("Gustavo","exemplo02@gmail.com","Rua: Miasma - 204","14487454125","CC02");
+INSERT INTO alunos(nome,email,endereço,cpf,turma) VALUES ("Leonardo","exemplo03@gmail.com","Rua: Meteoro - 120","14487454125","CC04");
+INSERT INTO alunos(nome,email,endereço,cpf,turma) VALUES ("Caio","exemplo04@gmail.com","Rua: Cataclismo - 874","14487454125","CC01");
+INSERT INTO alunos(nome,email,endereço,cpf,turma) VALUES ("Lucas","exemplo05@gmail.com","Rua: Dardo de Prata - 354","14487454125","CC01");
+
+CREATE TABLE faculdade (
+    faculdade_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(45) NOT NULL,
+    PRIMARY KEY(faculdade_id) 
+);
+INSERT INTO faculdade(nome) VALUES ("Universidade Vila Velha");
+
+CREATE TABLE professor (
+    professor_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(45) NOT NULL,
+    email TEXT NOT NULL,
+    endereço TEXT NOT NULL,
+    cpf VARCHAR(13),
+    PRIMARY KEY(professor_id) 
+);
+INSERT INTO professor(nome,email,endereço,cpf) VALUES ("Alessandro","exemplo01@gmail.com","Rua: Prisão Runica- 52","14487454125");
+INSERT INTO professor(nome,email,endereço,cpf) VALUES ("Vinicios","exemplo02@gmail.com","Rua: Rolamento - 111","14487454125");
+INSERT INTO professor(nome,email,endereço,cpf) VALUES ("Denis","exemplo03@gmail.com","Rua: Brincalhão Trapaceiro - 200","14487454125");
+
+CREATE TABLE disciplinas (
+    disciplinas_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(45) NOT NULL,
+    turma VARCHAR(6) NOT NULL,
+    PRIMARY KEY(disciplinas_id) 
+);
+INSERT INTO disciplinas(nome,turma) VALUES ("Estrutura de Dados","CC01");
+INSERT INTO disciplinas(nome,turma) VALUES ("Banco de Dados","CC02");
+INSERT INTO disciplinas(nome,turma) VALUES ("Programação de Computadores","CC05");
+INSERT INTO disciplinas(nome,turma) VALUES ("Engenharia de Software","CC04");
+INSERT INTO disciplinas(nome,turma) VALUES ("Lógica para Computação","CC01");
+
+
+SELECT * FROM alunos,disciplinas WHERE alunos.turma = disciplinas.turma
